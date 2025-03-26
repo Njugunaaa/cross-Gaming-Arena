@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Cross Gaming Arena</title>
+</head>
+<body>
+  <div id="heading">
+    <h1>
+      <img src="https://cdn-icons-png.flaticon.com/128/8176/8176146.png" alt="Game Icon" class="heading-icon">
+      CROSS GAMING ARENA
+    </h1>
+    <h3><strong><em>Gaming at its peak</em></strong></h3>
+  </div>
+  <h1 class = "glow">CROSS ARENA</h1>
+  <div class="movies-container">
+    <h2>Book a Video Game</h2>
+    <form action="">
+      <label for="username">Username</label><br>
+      <input type="text" required><br>
+      <label for="email">Email</label><br>
+      <input type="email" required><br>
+      <label for="gameselection">Select a Game</label><br>
+      <select name="game select" id="gameSelect">
+        <option value="fc25">EA Sports FC 25</option>
+        <option value="gta5">GTA V</option>
+        <option value="gta6">GTA VI</option>
+        <option value="forza5">Forza Horizon 5</option>
+        <option value="nfsmw">Need for Speed: Most Wanted</option>
+        <option value="nba2k">NBA 2K24</option>
+        <option value="codmw">Call of Duty: Modern Warfare III</option>
+        <option value="rdr2">Red Dead Redemption 2</option>
+        <option value="fifa23">FIFA 23</option>
+        <option value="witcher">The Witcher 3: Wild Hunt</option>
+        <option value="gowr">God of War Ragnarok</option>
+        <option value="cp2077">Cyberpunk 2077</option>
+        <option value="mk11">Mortal Kombat 11</option>
+        <option value="sp2">Spider-Man 2</option>
+        <option value="er">Elden Ring</option>
+      </select><br>
+      <p>Platform of Choice:</p>
+      <input type="radio" id="Xbox" name="platform" value="Xbox">
+      <label for="Xbox">Xbox</label>
+      <input type="radio" id="Ps5" name="platform" value="Ps5">
+      <label for="Ps5">Ps5</label>
+      <input type="radio" id="pc" name="platform" value="PC">
+      <label for="PC">PC</label><br>
+      <label for="duration">Duration in Hours:</label>
+      <select name="duration" id="duration">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+      <br>
 
+      <input type="submit" Value="Book Now" id="submit">
+      <p></p>
+  </form>
+  </div>
+  <div>
+    <h3 id="available">Available Games</h3>
+    <div class="image-grid"></div>
+  </div>
+  <div class="details">
+    <img src="" alt="Game Poster" class="image">
+    <p class="title">title</p><br>
+    <p class="genre">genre</p><br>
+    <p class="price">price</p><br>
+    <p class="platform">platform</p><br>
+    <p class="max_players">max_players</p><br>
+    <p class="status">status</p><br>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
