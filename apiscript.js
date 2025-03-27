@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
             .then(res => res.json())
             .then(data => data.record.games);
-    }
+    }//this function is able to be called when etching data from the server
 
     function displayImages(data) {
         const gridContainer = document.querySelector(".image-grid");
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <button onclick="document.querySelector('.details').style.display='none'">Close</button>
         `;
         details.style.display = "block";
-    }
+    }//thisfunction is responsible for showing the details i have in my specific games when i click on the posters.
 
     document.querySelector("#bookGameForm").addEventListener("submit", (e) => {
         e.preventDefault();
