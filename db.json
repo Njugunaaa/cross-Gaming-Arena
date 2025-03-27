@@ -39,7 +39,8 @@
       "price_per_hour": 700,
       "platforms": [
         "PS5",
-        "Xbox"
+        "Xbox",
+        "PC"
       ],
       "max_players": 1,
       "status": "Available",
