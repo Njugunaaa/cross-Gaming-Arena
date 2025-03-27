@@ -1,154 +1,242 @@
 {
   "games": [
     {
-      "id": 1,
+      "id": "1",
       "title": "EA Sports FC 25",
       "genre": "Sports",
       "price_per_hour": 350,
-      "platforms": ["PS5", "Xbox", "PC"],
+      "platforms": [
+        "PS5",
+        "Xbox",
+        "PC"
+      ],
       "max_players": 4,
       "status": "Available",
-      "poster": "https://images6.alphacoders.com/137/thumb-440-1371795.webp"
+      "poster": "https://images6.alphacoders.com/137/thumb-440-1371795.webp",
+      "booked_by": "",
+      "booked_hours": 0
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "GTA V",
       "genre": "Action-Adventure",
       "price_per_hour": 400,
-      "platforms": ["PS5", "Xbox", "PC"],
+      "platforms": [
+        "PS5",
+        "Xbox",
+        "PC"
+      ],
       "max_players": 1,
       "status": "Booked",
-      "poster": "https://images6.alphacoders.com/515/thumb-440-515390.webp"
+      "poster": "https://images6.alphacoders.com/515/thumb-440-515390.webp",
+      "booked_by": "Oliver Queen",
+      "booked_hours": 3
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "GTA VI",
       "genre": "Action-Adventure",
       "price_per_hour": 700,
-      "platforms": ["PS5", "Xbox"],
+      "platforms": [
+        "PS5",
+        "Xbox"
+      ],
       "max_players": 1,
-      "status": "Unreleased",
-      "poster": "https://images3.alphacoders.com/134/thumb-440-1343866.webp"
+      "status": "Available",
+      "poster": "https://images3.alphacoders.com/134/thumb-440-1343866.webp",
+      "booked_by": "",
+      "booked_hours": 0
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Forza Horizon 5",
       "genre": "Racing",
       "price_per_hour": 300,
-      "platforms": ["Xbox", "PC"],
+      "platforms": [
+        "Xbox",
+        "PC"
+      ],
       "max_players": 12,
       "status": "Available",
-      "poster": "https://picfiles.alphacoders.com/574/thumb-1920-574160.jpg"
+      "poster": "https://picfiles.alphacoders.com/574/thumb-1920-574160.jpg",
+      "booked_by": "",
+      "booked_hours": 0
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Need for Speed: Most Wanted",
       "genre": "Racing",
       "price_per_hour": 250,
-      "platforms": ["PS4", "Xbox", "PC"],
+      "platforms": [
+        "PS4",
+        "Xbox",
+        "PC"
+      ],
       "max_players": 1,
       "status": "Available",
-      "poster": "https://picfiles.alphacoders.com/363/thumb-1920-363372.png"
+      "poster": "https://picfiles.alphacoders.com/363/thumb-1920-363372.png",
+      "booked_by": "",
+      "booked_hours": 0
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "NBA 2K24",
       "genre": "Sports",
       "price_per_hour": 500,
-      "platforms": ["PS5", "Xbox", "PC"],
+      "platforms": [
+        "PS5",
+        "Xbox",
+        "PC"
+      ],
       "max_players": 2,
       "status": "Booked",
-      "poster": "https://picfiles.alphacoders.com/631/thumb-800-631151.webp"
+      "poster": "https://picfiles.alphacoders.com/631/thumb-800-631151.webp",
+      "booked_by": "Steph Curry",
+      "booked_hours": 2
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Call of Duty: Modern Warfare III",
       "genre": "FPS",
       "price_per_hour": 600,
-      "platforms": ["PS5", "Xbox", "PC"],
+      "platforms": [
+        "PS5",
+        "Xbox",
+        "PC"
+      ],
       "max_players": 16,
       "status": "Available",
-      "poster": "https://picfiles.alphacoders.com/586/thumb-1920-58604.jpg"
+      "poster": "https://picfiles.alphacoders.com/586/thumb-1920-58604.jpg",
+      "booked_by": "",
+      "booked_hours": 0
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Red Dead Redemption 2",
       "genre": "Action-Adventure",
       "price_per_hour": 450,
-      "platforms": ["PS4", "Xbox", "PC"],
+      "platforms": [
+        "PS4",
+        "Xbox",
+        "PC"
+      ],
       "max_players": 1,
       "status": "Booked",
-      "poster": "https://images7.alphacoders.com/105/thumb-440-1054152.webp"
+      "poster": "https://images7.alphacoders.com/105/thumb-440-1054152.webp",
+      "booked_by": "Thomas Shelby",
+      "booked_hours": 5
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "FIFA 23",
       "genre": "Sports",
       "price_per_hour": 300,
-      "platforms": ["PS4", "PS5", "Xbox"],
+      "platforms": [
+        "Ps5"
+      ],
       "max_players": 4,
-      "status": "Available",
-      "poster": "https://avatarfiles.alphacoders.com/332/thumb-350-332226.webp"
+      "status": "Booked",
+      "poster": "https://avatarfiles.alphacoders.com/332/thumb-350-332226.webp",
+      "booked_by": "Joshua Gichuhi",
+      "booked_hours": 2
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "The Witcher 3: Wild Hunt",
       "genre": "RPG",
       "price_per_hour": 350,
-      "platforms": ["PS4", "Xbox", "PC"],
+      "platforms": [
+        "PS4",
+        "Xbox",
+        "PC"
+      ],
       "max_players": 1,
       "status": "Available",
-      "poster": "https://images5.alphacoders.com/418/thumb-1920-418977.jpg"
+      "poster": "https://images5.alphacoders.com/418/thumb-1920-418977.jpg",
+      "booked_by": "",
+      "booked_hours": 0
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "God of War Ragnarok",
       "genre": "Action",
       "price_per_hour": 550,
-      "platforms": ["PS5"],
+      "platforms": [
+        "PS5"
+      ],
       "max_players": 1,
       "status": "Available",
-      "poster": "https://avatarfiles.alphacoders.com/335/thumb-350-335222.webp"
+      "poster": "https://avatarfiles.alphacoders.com/335/thumb-350-335222.webp",
+      "booked_by": "",
+      "booked_hours": 0
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Cyberpunk 2077",
       "genre": "RPG",
       "price_per_hour": 400,
-      "platforms": ["PS5", "Xbox", "PC"],
+      "platforms": [
+        "PS5",
+        "Xbox",
+        "PC"
+      ],
       "max_players": 1,
       "status": "Available",
-      "poster": "https://images6.alphacoders.com/133/thumb-440-1336181.webp"
+      "poster": "https://images6.alphacoders.com/133/thumb-440-1336181.webp",
+      "booked_by": "",
+      "booked_hours": 0
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Mortal Kombat 11",
       "genre": "Fighting",
       "price_per_hour": 350,
-      "platforms": ["PS4", "PS5", "Xbox", "PC"],
+      "platforms": [
+        "Ps5"
+      ],
       "max_players": 2,
-      "status": "Available",
-      "poster": "https://picfiles.alphacoders.com/228/thumb-1920-228558.jpg"
+      "status": "Booked",
+      "poster": "https://picfiles.alphacoders.com/228/thumb-1920-228558.jpg",
+      "booked_by": "Joshua Gichuhi",
+      "booked_hours": 3
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Spider-Man 2",
       "genre": "Action-Adventure",
       "price_per_hour": 600,
-      "platforms": ["PS5"],
+      "platforms": [
+        "PS5"
+      ],
       "max_players": 1,
       "status": "Available",
-      "poster": "https://images6.alphacoders.com/132/thumb-440-1321664.webp"
+      "poster": "https://images6.alphacoders.com/132/thumb-440-1321664.webp",
+      "booked_by": "",
+      "booked_hours": 0
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Elden Ring",
       "genre": "RPG",
       "price_per_hour": 550,
-      "platforms": ["PS5", "Xbox", "PC"],
+      "platforms": [
+        "PC"
+      ],
       "max_players": 1,
-      "status": "Available",
-      "poster": "https://images4.alphacoders.com/115/thumb-440-1151249.webp"
+      "status": "Booked",
+      "poster": "https://images4.alphacoders.com/115/thumb-440-1151249.webp",
+      "booked_by": "bscit-05-0243/2021",
+      "booked_hours": 5
+    },
+    {
+      "id": "2610",
+      "title": "fortnite",
+      "genre": "fight",
+      "price": "777",
+      "platforms": "PC",
+      "max_players": "2",
+      "poster": "https://images.alphacoders.com/134/thumb-440-1343561.webp",
+      "status": "Available"
     }
   ]
 }

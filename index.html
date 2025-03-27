@@ -16,30 +16,30 @@
   </div>
   <h1 class = "glow">CROSS ARENA</h1>
   <div class="movies-container">
-    <h2>Book a Video Game</h2>
-    <form action="">
+    <h2 id="book">Book a Video Game</h2>
+    <form action="" id="bookGameForm">
       <label for="username">Username</label><br>
-      <input type="text" required><br>
+      <input type="text" id="username"required><br>
       <label for="email">Email</label><br>
-      <input type="email" required><br>
+      <input type="email" name=email required><br>
       <label for="gameselection">Select a Game</label><br>
-      <select name="game select" id="gameSelect">
-        <option value="fc25">EA Sports FC 25</option>
-        <option value="gta5">GTA V</option>
-        <option value="gta6">GTA VI</option>
-        <option value="forza5">Forza Horizon 5</option>
-        <option value="nfsmw">Need for Speed: Most Wanted</option>
-        <option value="nba2k">NBA 2K24</option>
-        <option value="codmw">Call of Duty: Modern Warfare III</option>
-        <option value="rdr2">Red Dead Redemption 2</option>
-        <option value="fifa23">FIFA 23</option>
-        <option value="witcher">The Witcher 3: Wild Hunt</option>
-        <option value="gowr">God of War Ragnarok</option>
-        <option value="cp2077">Cyberpunk 2077</option>
-        <option value="mk11">Mortal Kombat 11</option>
-        <option value="sp2">Spider-Man 2</option>
-        <option value="er">Elden Ring</option>
-      </select><br>
+      <select name="game" id="gameSelect">
+        <option value="EA Sports FC 25">EA Sports FC 25</option>
+        <option value="GTA V">GTA V</option>
+        <option value="GTA VI">GTA VI</option>
+        <option value="Forza Horizon 5">Forza Horizon 5</option>
+        <option value="Need for Speed: Most Wanted">Need for Speed: Most Wanted</option>
+        <option value="NBA 2K24">NBA 2K24</option>
+        <option value="Call of Duty: Modern Warfare III">Call of Duty: Modern Warfare III</option>
+        <option value="Red Dead Redemption 2">Red Dead Redemption 2</option>
+        <option value="FIFA 23">FIFA 23</option>
+        <option value="The Witcher 3: Wild Hunt">The Witcher 3: Wild Hunt</option>
+        <option value="God of War Ragnarok">God of War Ragnarok</option>
+        <option value="Cyberpunk 2077">Cyberpunk 2077</option>
+        <option value="Mortal Kombat 11">Mortal Kombat 11</option>
+        <option value="Spider-Man 2">Spider-Man 2</option>
+        <option value="Elden Ring">Elden Ring</option>
+       </select><br>
       <p>Platform of Choice:</p>
       <input type="radio" id="Xbox" name="platform" value="Xbox">
       <label for="Xbox">Xbox</label>
@@ -63,6 +63,14 @@
   </form>
   </div>
   <div>
+
+    
+    
+    
+
+
+  </div>
+  <div>
     <h3 id="available">Available Games</h3>
     <div class="image-grid"></div>
   </div>
@@ -74,6 +82,18 @@
     <p class="platform">platform</p><br>
     <p class="max_players">max_players</p><br>
     <p class="status">status</p><br>
+  </div>
+  <div class="addGame">
+    <h3 id="add">Add a New Game</h3>
+    <form id="addGameForm">
+      <input type="text" name="title" placeholder="Game Title" required><br>
+      <input type="text" name="genre" placeholder="Genre" required><br>
+      <input type="text" name="price" placeholder="Price" required><br>
+      <input type="text" name="platforms" placeholder="Platforms (e.g. PC, PS5)" required><br>
+      <input type="number" name="max_players" placeholder="Max Players" required><br>
+      <input type="text" name="poster" placeholder="Poster Image URL" required><br>
+      <button type="submit">Add Game</button><br>
+    </form>
   </div>
 
   <script src="./script.js"></script>
