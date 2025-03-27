@@ -1,4 +1,5 @@
 ## ****CROSS GAMING ARENA****
+GICHUHI JOSHUA NJUGUNA
 ## MORINGA PHASE 1 PROJECT
 ## Github Pages Link: https://njugunaaa.github.io/cross-Gaming-Arena/ 
 ## A GAME BOOKING APPLICATION
