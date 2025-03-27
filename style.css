@@ -40,9 +40,10 @@ body{
 }
 #submit{
   background-color: green;
+  cursor: pointer;
 }
 #submit:hover{
-  background-color: aqua;
+  background-color: red;
 }
 .heading-icon {
   width: 45px;
