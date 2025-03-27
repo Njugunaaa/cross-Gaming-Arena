@@ -12,7 +12,7 @@ server and goes on to fetch, add and update data in the server momentarily altog
 => CSS -Styling my app
 => JavaScript -Handled application functionality and api interaction.
 => JSONBin.io - Storing and retrieval of my data
-## How it works
+## Features
 => One is able to see what games are available and on hovering over the various game posters a user can be able 
 to see which games are available and if they are booked who they are booked by and or what duration.
 => A user is able to book and when they submit the booking it is automatically updated in the server and can still 
