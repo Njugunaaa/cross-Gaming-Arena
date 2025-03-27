@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Fetching games from JSONBin...");
 
-    const jsonBinUrl = "https://api.jsonbin.io/v3/b/67e5d2bf8960c979a579c977";
-    const jsonBinMasterKey = "$2a$10$xSp4u1Y3iLb5bmRCQyG4WOtKRJELsKS3BAzd7O72PJcpOhtlNVrji";
+    const jsonBinUrl = "https://api.jsonbin.io/v3/b/67e5d2bf8960c979a579c977";//Json URL
+    const jsonBinMasterKey = "$2a$10$xSp4u1Y3iLb5bmRCQyG4WOtKRJELsKS3BAzd7O72PJcpOhtlNVrji";//JSON masterkey is an api key that guarantees our api access to the json file we have backed up there.
 
     fetchGames(); // Fetch games when the page loads
 
