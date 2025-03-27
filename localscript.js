@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         details.style.display = "block"
     }
-    
+    //bookgame functionality
     document.querySelector("#bookGameForm").addEventListener("submit", (e) => {
       e.preventDefault();
 
