@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             img.src = game.poster
             img.alt = game.title
 
-
+            //The below takes care of the overlay that is shown when one hovers over a poster.
             const overlay = document.createElement("div");
             overlay.classList.add("hover-overlay");
             overlay.innerHTML = `
