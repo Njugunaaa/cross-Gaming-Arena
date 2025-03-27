@@ -4,26 +4,29 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchGames(); // Fetch games when the page loads
 
     function fetchGames() {
-        fetch("http://localhost:3000/games")
+        fetch("https://api.jsonbin.io/v3/b/67e5d2bf8960c979a579c977", {
+            headers: { "X-Master-Key": "$2a$10$xSp4u1Y3iLb5bmRCQyG4WOtKRJELsKS3BAzd7O72PJcpOhtlNVrji" }
+        })
             .then((res) => res.json())
-            .then((data) => displayImages(data))
+            .then((data) => displayImages(data.record.games))
             .catch((error) => console.error("Error fetching data:", error));
     }
     function getGames() {
-      return fetch("http://localhost:3000/games").then(res => res.json());
-  }
+        return fetch("https://api.jsonbin.io/v3/b/67e5d2bf8960c979a579c977", {
+            headers: { "X-Master-Key": "$2a$10$xSp4u1Y3iLb5bmRCQyG4WOtKRJELsKS3BAzd7O72PJcpOhtlNVrji" }
+        }).then(res => res.json()).then(data => data.record.games);
+    }
 
     function displayImages(data) {
         const gridContainer = document.querySelector(".image-grid");
-        gridContainer.innerHTML = ""
+        gridContainer.innerHTML = "";
 
         data.forEach((game) => {
             const imageItem = document.createElement("div");
             imageItem.classList.add("image-item");
-            const img = document.createElement("img")
-            img.src = game.poster
-            img.alt = game.title
-
+            const img = document.createElement("img");
+            img.src = game.poster;
+            img.alt = game.title;
 
             const overlay = document.createElement("div");
             overlay.classList.add("hover-overlay");
@@ -32,22 +35,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p class="game-status">
                     ${game.status === "Available" ? "✅ Available" : `❌ Booked By: ${game.booked_by} for:: ${game.booked_hours} hours`}
                 </p>
-            `
-          //addEventlisteners
+            `;
+            //addEventlisteners
             imageItem.addEventListener("mouseover", () => {
-                overlay.style.opacity = "1"
+                overlay.style.opacity = "1";
             });
             imageItem.addEventListener("mouseout", () => {
-                overlay.style.opacity = "0"
+                overlay.style.opacity = "0";
             });
 
             img.addEventListener("click", () => {
-                showDetails(game)
+                showDetails(game);
             });
 
-            imageItem.appendChild(overlay)
-            imageItem.appendChild(img)
-            gridContainer.appendChild(imageItem)
+            imageItem.appendChild(overlay);
+            imageItem.appendChild(img);
+            gridContainer.appendChild(imageItem);
         });
     }
 
@@ -63,91 +66,101 @@ document.addEventListener("DOMContentLoaded", () => {
             <p><strong>Status: </strong>${game.status}</p>
             <button onclick="document.querySelector('.details').style.display='none'">Close</button>
         `;
-        details.style.display = "block"
+        details.style.display = "block";
     }
-    
+
     document.querySelector("#bookGameForm").addEventListener("submit", (e) => {
-      e.preventDefault();
+        e.preventDefault();
 
-      const bookedBy = document.querySelector("#username").value;
-      const gameSelection = document.querySelector("#gameSelect").value.trim();
-      const platform = document.querySelector("input[name='platform']:checked").value;
-      const bookedHours = parseInt(document.querySelector("#duration").value, 10);//it may refuse to like add the value o duration if it is not an int
+        const bookedBy = document.querySelector("#username").value;
+        const gameSelection = document.querySelector("#gameSelect").value.trim();
+        const platform = document.querySelector("input[name='platform']:checked").value;
+        const bookedHours = parseInt(document.querySelector("#duration").value, 10);//it may refuse to like add the value o duration if it is not an int
 
-      getGames().then(games => {
-        const game = games.find(g => g.title.trim() === gameSelection.trim());
-              if (!game) {
-                  alert("Game not found!");
-                  return;
-              }
+        getGames().then(games => {
+            const game = games.find(g => g.title.trim() === gameSelection.trim());
+                if (!game) {
+                    alert("Game not found!");
+                    return;
+                }
 
-              if (game.status === "Booked") {
-                  alert("Game is already booked!");
-                  return;
-              }
+                if (game.status === "Booked") {
+                    alert("Game is already booked!");
+                    return;
+                }
 
-              fetch(`http://localhost:3000/games/${game.id}`, {
-                  method: "PATCH",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({
-                    booked_by: bookedBy,
-                    platforms: [platform],
-                    booked_hours: bookedHours,
-                    status: "Booked"
+                fetch("https://api.jsonbin.io/v3/b/67e5d2bf8960c979a579c977", {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-Master-Key": "$2a$10$xSp4u1Y3iLb5bmRCQyG4WOtKRJELsKS3BAzd7O72PJcpOhtlNVrji"
+                    },
+                    body: JSON.stringify({
+                        games: games.map(g => {
+                            if (g.id === game.id) {
+                                return {
+                                    ...g,
+                                    booked_by: bookedBy,
+                                    platforms: [platform],
+                                    booked_hours: bookedHours,
+                                    status: "Booked"
+                                };
+                            }
+                            return g;
+                        })
+                    })
                 })
-              })
-              .then(res => {
-                  if (res.ok) {
-                      alert("Game booked successfully!");
-                      fetchGames();
-                  } else {
-                      alert("Failed to book game.");
-                  }
-              });
-          });
-  }); 
-  
-  
-  
-  
+                    .then(res => {
+                        if (res.ok) {
+                            alert("Game booked successfully!");
+                            fetchGames();
+                        } else {
+                            alert("Failed to book game.");
+                        }
+                    });
+            });
+    });
 
     //my POST FUNCTIONALITY
     const addGameForm = document.querySelector("#addGameForm");
 
-  
-      addGameForm.addEventListener("submit", function (e) {
-          e.preventDefault();
+    addGameForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-          const gameTitle = e.target.title.value;
-          const gameGenre = e.target.genre.value;
-          const gamePrice = e.target.price.value;
-          const gamePlatform = e.target.platforms.value;
-          const maxPlayers = e.target.max_players.value;
-          const poster = e.target.poster.value;
+        const gameTitle = e.target.title.value;
+        const gameGenre = e.target.genre.value;
+        const gamePrice = e.target.price.value;
+        const gamePlatform = e.target.platforms.value;
+        const maxPlayers = e.target.max_players.value;
+        const poster = e.target.poster.value;
 
-          fetch("http://localhost:3000/games", {
-              method: "POST",
-              headers: {
-                  "Accept": "application/json",
-                  "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                  title: gameTitle,
-                  genre: gameGenre,
-                  price: gamePrice,
-                  platforms: gamePlatform,
-                  max_players: maxPlayers,
-                  poster: poster,
-                  status: "Available",
-              }),
-          })
-              .then((res) => res.json())
-              .then((data) => {
-                  console.log("Game added:", data);
-                  alert(`Game "${data.title}" added successfully!`);
-                  fetchGames(); //calling this refreshes the game after it performs its function.
-              })
-              .catch((err) => console.error("Error:", err));
-      });
-    } 
-);
+        getGames().then(games => {
+            const newGame = {
+                id: games.length + 1,
+                title: gameTitle,
+                genre: gameGenre,
+                price: gamePrice,
+                platforms: gamePlatform,
+                max_players: maxPlayers,
+                poster: poster,
+                status: "Available"
+            };
+
+            fetch("https://api.jsonbin.io/v3/b/67e5d2bf8960c979a579c977", {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-Master-Key": "$2a$10$xSp4u1Y3iLb5bmRCQyG4WOtKRJELsKS3BAzd7O72PJcpOhtlNVrji"
+                },
+                body: JSON.stringify({ games: [...games, newGame] })
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log("Game added:", data);
+                    alert(`Game "${newGame.title}" added successfully!`);
+                    fetchGames(); //calling this refreshes the game after it performs its function.
+                })
+                .catch((err) => console.error("Error:", err));
+        });
+    });
+});
