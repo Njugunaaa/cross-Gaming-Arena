@@ -10,7 +10,7 @@ server and goes on to fetch, add and update data in the server momentarily altog
 ## Technologies used
 => HTML -For structuring my app
 => CSS -Styling my app
-=> JavaScript -Handled application functionality and api interaction.
+=> JavaScript -Handled application functionality and API interaction.
 => JSONBin.io - Storing and retrieval of my data
 ## Features
 => One is able to see what games are available and on hovering over the various game posters a user can be able 
